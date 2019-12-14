@@ -1,13 +1,9 @@
---   DROP TABLE air_bnb
-
 --   CREATE TABLE air_bnb(
 --    	latitude FLOAT,
 --    	longitude FLOAT,
 --    	neighbourhood VARCHAR(100),
 --   	neighbourhood_group VARCHAR (100)
 --   );
-
---     DROP TABLE nyc_311
 
 --    CREATE TABLE nyc_311(
 --    	agency VARCHAR(100),
@@ -24,6 +20,8 @@
 -- );
 
 --   SELECT * FROM nyc_311
+
+--   SELECT * FROM air_bnb
 
 -- SELECT nyc_311.borough, nyc_311.descriptor, air_bnb.neighbourhood
 -- FROM nyc_311
