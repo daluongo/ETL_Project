@@ -16,4 +16,4 @@ This data source contained 22mil rows, which resulted in issues relating to  loc
 The API code was written in  Jupyter Notebook:
 Note that a limit of 100 rows was used for each API call. This can be easily adjusted to pull much more.
 
-![alt text](https://github.com/[daluongo]/[ETL_Project]/blob/[master]/Picture1.png?raw=true)
+![alt text](https://github.com/[daluongo]/[ETL_Project]/blob/[master]/Images/Picture1.png?raw=true)
