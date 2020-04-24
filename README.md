@@ -8,12 +8,32 @@ This was a team project designed to practice the ETL process (Extraction, Transf
 ## Extraction Phase
 
 We utilized one CSV file and one API written in JSON :
-New York City Open AirBnb Data 
+
+### New York City Open AirBnb Data 
 This data was downloaded as CSV file and was comprised of  48,000 rows
 
-311 Service Requests from 2010 to Present
-This data source contained 22mil rows, which resulted in issues relating to  local storage and ease of transferring data when downloading as a CSV.   As a result, the NYC Open Data API was used. This allowed for flexibility in the amount of  data used within the project.
-The API code was written in  Jupyter Notebook:
-Note that a limit of 100 rows was used for each API call. This can be easily adjusted to pull much more.
+### 311 Service Requests from 2010 to Present
 
-![alt text](https://github.com/[daluongo]/[ETL_Project]/blob/[master]/Images/Picture1.png?raw=true)
+This data source contained 22mil rows, which resulted in issues relating to  local storage and ease of transferring data when downloading as a CSV.   
+
+As a result, the NYC Open Data API was used. This allowed for flexibility in the amount of  data used within the project.
+
+The API code was written in  Jupyter Notebook.
+
+
+## Transformation Phase
+
+### PostgreSQL Database
+
+We created a local PostgreSQL Database consisting of two tables:
+
+* NYC_311
+
+	* The JSON database would be imported into this table
+
+* Air_bnb
+
+	* The CSV file would be imported into this table
+	* Each table consisted of the relevant columns necessary to create a joined table later in the process.
+
+
