@@ -60,3 +60,18 @@ We created a local PostgreSQL Database consisting of two tables:
 * Later on, we added code to adjust the ‘borough’ column to ensure that the format matched the Air_bnb database:
 	* NYC_311_data_df['borough'] = NYC_311_data_df['borough'].str.capitalize()
 
+
+## Load Phase
+
+* After the data sets were cleaned, we created connection strings from both Jupyter Notebooks to the local PostgreSQL database
+	* rds_connection_string = "postgres:Password1!@localhost:5432/customer_db"
+	* engine = create_engine(f'postgresql://{rds_connection_string}')
+	
+* We then verified we were connected to the SQL Database by checking for the table names
+	* engine.table_names()
+
+* Next, we used Pandas to load the Dataframes into the Database
+	* new_airbnb_df.to_sql(name='air_bnb', con=engine, if_exists='append', index=False)
+
+* Finally, we confirmed the data had been added by querying the database
+	* pd.read_sql_query('select * from air_bnb', con=engine).head()
